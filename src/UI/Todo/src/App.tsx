@@ -9,17 +9,21 @@ import TodoItem from './Todo/Objects/TodoItem';
 import TodoList from './Todo/Objects/TodoList';
 import { observable } from 'mobx';
 import './App.scss'
+import { observer } from 'mobx-react';
 
-interface IProps {}
+interface IProps {
+
+}
 
 class State
 {
   @observable
   list: TodoList = new TodoList([]);
+  @observable
   includeComplete : boolean = false;
 }
 
-
+@observer
 class App extends Component<IProps, State> {
   TodoListComponent : TodoListComponent | null = null;
 
@@ -39,14 +43,13 @@ class App extends Component<IProps, State> {
   {
     var loadedlist = await TodoService.Get(includeCompleted);
     this.setState({list : loadedlist});
-    this.TodoListComponent?.setState({list : this.state.list})
   }
 
   ATDCRef!: AddTodoComponant | null;
   
   render()
   {
-    const state = this.state;
+      const state = this.state;
       let button;
       if(this.state.includeComplete)
       {
@@ -64,7 +67,7 @@ class App extends Component<IProps, State> {
             {button}
             <button className="btn btn-success ml-1" onClick={ this.AddTodoClick }>Add New To-do</button>            
         </div>
-        <TodoListComponent ref={el => this.TodoListComponent = el} />
+        <TodoListComponent list={this.state.list}  ShowCompleted={this.state.includeComplete}/>
         <div className="d-flex justify-content-center p-3 bg-dark fixed-bottom">
 
         </div>
@@ -75,7 +78,6 @@ class App extends Component<IProps, State> {
   OnAdd = (todoItem: TodoItem) =>
   {
     this.state.list.Items.push(todoItem);
-    this.TodoListComponent?.setState({list : this.state.list})
   }
 
   AddTodoClick = () => 

@@ -3,12 +3,15 @@ import TodoItem  from './Objects/TodoItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
 import TodoService from "./Services/TodoService";
+import { observer } from "mobx-react";
 
 interface IProp{
     item : TodoItem
     OnCompleted(item:TodoItem)
+    OnReOpen(item:TodoItem)
 }
 
+@observer
 export default class TodoItemComponent extends Component<IProp> {
 
     public render()
@@ -61,7 +64,8 @@ export default class TodoItemComponent extends Component<IProp> {
     {        
         if(window.confirm("Are you wish to revert this todo from complete?"))
         {
-            alert(`reopen id:${this.props.item.id}`);
+            TodoService.ReOpen(this.props.item.id);
+            this.props.OnReOpen(this.props.item);
         }
     }
 

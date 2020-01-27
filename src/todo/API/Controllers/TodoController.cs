@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -24,21 +25,28 @@ namespace Endpoints.Todo.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<ITodoItem> Get(bool IncludeCompleted)
+        public async Task<IEnumerable<ITodoItem>> GetAsync(bool IncludeCompleted)
         {
-            return _todoService.GetTodosAsync(IncludeCompleted).Result;
+            return await _todoService.GetTodosAsync(IncludeCompleted);
         }
 
         [HttpPost]
         [Route("MarkComplete")]
-        public void MarkComplete(string id)
+        public async Task MarkCompleteAsync(string id)
         {
-            _todoService.MarkTodoCompleteAsync(Guid.Parse(id));
+            await _todoService.MarkTodoCompleteAsync(Guid.Parse(id));
+        }
+
+        [HttpPost]
+        [Route("ReOpen")]
+        public async Task ReOpenAsync(string id)
+        {
+            await _todoService.ReOpenAsync(Guid.Parse(id));
         }
 
         /* Send a populated TodoItem into this API controller method to pass onto the Todoservice to handle the add. */
         [HttpPost]
-        public void Add([FromBody]TodoItem item)
+        public void AddAsync([FromBody]TodoItem item)
         {
             _logger.Log(LogLevel.Trace, $"Todo Controller called with data { JsonConvert.SerializeObject(item) }.");
             

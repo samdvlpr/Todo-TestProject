@@ -11,6 +11,8 @@ namespace Todo.ServiceLayer.Abstractions
         //Todo: Add Pagination
         Task<IEnumerable<ITodoItem>> GetTodosAsync(bool IncludeCompleted);
 
+        Task ReOpenAsync(Guid id);
+
         Task AddTodoAsync(ITodoItem item);
 
         Task MarkTodoCompleteAsync(Guid id);

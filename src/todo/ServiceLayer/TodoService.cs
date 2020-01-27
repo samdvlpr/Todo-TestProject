@@ -32,6 +32,13 @@ namespace Todo.ServiceLayer
             return result;
         }
 
+        public async Task ReOpenAsync(Guid id)
+        {
+            var todo = await _todoRepository.GetAsync(id);
+            todo.IsComplete = false;
+            _todoRepository.UpdateAsync(todo);
+        }
+
         public async Task MarkTodoCompleteAsync(Guid id)
         {
             var todo = await _todoRepository.GetAsync(id);

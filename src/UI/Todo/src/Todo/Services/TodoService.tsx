@@ -65,4 +65,17 @@ export default class TodoService {
 
         await fetch(myRequest);  
     }
+
+    static async ReOpen(id: string)
+    {      
+
+        const myRequest = new Request(`${this.endpoint}/ReOpen?id=${id}`, {
+          method: 'Post',
+          mode: 'cors',
+          headers: this.headers
+        });
+                  
+
+        await fetch(myRequest);  
+    }
 }

@@ -4,51 +4,54 @@ import ITodoList from './Objects/Abstractions/ITodoList';
 import TodoList from './Objects/TodoList';
 import { observable, computed } from 'mobx';
 import ITodoItem from './Objects/Abstractions/ITodoItem';
+import { observer } from 'mobx-react';
 
 
-interface IProps{   
+interface IProps{  
+    list : ITodoList 
+    ShowCompleted:boolean
 }
 
-interface IState 
-{
-    list : ITodoList
-}
 
-class State implements IState
-{
-    constructor(todolist : ITodoList)
-    {
-        this.list = todolist
-    }
-
-    @observable
-    list : ITodoList
-    
-}
-
-export default class TodoListComponent extends Component<IProps, IState> {
+@observer
+export default class TodoListComponent extends Component<IProps> {
     
 
     constructor(props)
     {
-        super(props);
-        this.state= new State(new TodoList([]));        
+        super(props);   
     }
 
     OnCompleted = (item:ITodoItem) =>
     {
+        if(!this.props.ShowCompleted)
+        {
+            const index: number = this.props.list.Items.indexOf(item);
+            if (index !== -1) {
+                this.props.list.Items.splice(index, 1);
+            }  
+        }
+        else
+        {
+            item.isComplete = true
+        }
         /*TODO: update list if not showing completed*/
+    }
+
+    OnReOpen = (item:ITodoItem) =>
+    {
+        item.isComplete = false
     }
 
     public render()
     {
-        if(this.state.list?.IsEmpty)
+        if(this.props.list?.IsEmpty)
         {
             return (<div className="text-center p-3">** No Items loaded **</div>);
         }
-        return (this.state.list.GetItems.map(listitem => {
+        return (this.props.list.GetItems.map(listitem => {
             return (<div className="list-group" key={ listitem.id } >
-                <TodoItemComponent key={ listitem.id } item={ listitem } OnCompleted={this.OnCompleted} />
+                <TodoItemComponent key={ listitem.id } item={ listitem } OnCompleted={this.OnCompleted} OnReOpen={this.OnReOpen} />
             </div>)
             }));
     }
