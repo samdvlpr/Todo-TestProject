@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstractions\**" />
+    <Compile Remove="API\**" />
+    <Compile Remove="DataLayer\**" />
+    <Compile Remove="RepositoryLayer\**" />
+    <Compile Remove="ServiceLayer\**" />
+    <Compile Remove="UI\**" />
+    <EmbeddedResource Remove="Abstractions\**" />
+    <EmbeddedResource Remove="API\**" />
+    <EmbeddedResource Remove="DataLayer\**" />
+    <EmbeddedResource Remove="RepositoryLayer\**" />
+    <EmbeddedResource Remove="ServiceLayer\**" />
+    <EmbeddedResource Remove="UI\**" />
+    <None Remove="Abstractions\**" />
+    <None Remove="API\**" />
+    <None Remove="DataLayer\**" />
+    <None Remove="RepositoryLayer\**" />
+    <None Remove="ServiceLayer\**" />
+    <None Remove="UI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
+    <PackageReference Include="XServiceBuilderLibrary" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Abstractions\Todo.Abstractions.csproj" />
+    <ProjectReference Include="serviceLayer\Todo.ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>

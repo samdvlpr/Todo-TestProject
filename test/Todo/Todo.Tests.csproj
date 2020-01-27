@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MoqObjects\**" />
+    <EmbeddedResource Remove="MoqObjects\**" />
+    <None Remove="MoqObjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\todo\dataLayer\Todo.DataLayer.csproj" />
+    <ProjectReference Include="..\..\src\todo\RepositoryLayer\Abstractions\Todo.RepositoryLayer.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\todo\serviceLayer\Abstractions\Todo.ServiceLayer.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\todo\serviceLayer\Todo.ServiceLayer.csproj" />
+    <ProjectReference Include="..\..\src\todo\Todo.csproj" />
+    <ProjectReference Include="MoqObjects\Todo.Tests.MoqObjects.csproj" />
+  </ItemGroup>
+
+</Project>

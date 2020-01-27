@@ -1,0 +1,8 @@
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\bin\Debug\netstandard2.0\Todo.Abstractions.deps.json
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\bin\Debug\netstandard2.0\Todo.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\bin\Debug\netstandard2.0\Todo.Abstractions.pdb
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\obj\Debug\netstandard2.0\Todo.Abstractions.AssemblyInfoInputs.cache
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\obj\Debug\netstandard2.0\Todo.Abstractions.AssemblyInfo.cs
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\obj\Debug\netstandard2.0\Todo.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\obj\Debug\netstandard2.0\Todo.Abstractions.pdb
+c:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\Abstractions\obj\Debug\netstandard2.0\Todo.Abstractions.csprojAssemblyReference.cache

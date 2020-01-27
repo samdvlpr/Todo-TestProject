@@ -1,0 +1,8 @@
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\bin\Release\netstandard2.0\Todo.DataLayer.Abstractions.deps.json
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\bin\Release\netstandard2.0\Todo.DataLayer.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\bin\Release\netstandard2.0\Todo.DataLayer.Abstractions.pdb
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\obj\Release\netstandard2.0\Todo.DataLayer.Abstractions.csprojAssemblyReference.cache
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\obj\Release\netstandard2.0\Todo.DataLayer.Abstractions.AssemblyInfoInputs.cache
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\obj\Release\netstandard2.0\Todo.DataLayer.Abstractions.AssemblyInfo.cs
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\obj\Release\netstandard2.0\Todo.DataLayer.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\dataLayer\Abstractions\obj\Release\netstandard2.0\Todo.DataLayer.Abstractions.pdb

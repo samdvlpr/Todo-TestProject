@@ -1,0 +1,11 @@
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\bin\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.deps.json
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\bin\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\bin\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.pdb
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\bin\Debug\netstandard2.0\Todo.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\bin\Debug\netstandard2.0\Todo.Abstractions.pdb
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.csprojAssemblyReference.cache
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.AssemblyInfoInputs.cache
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.AssemblyInfo.cs
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.csproj.CopyComplete
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.dll
+C:\Users\sam\source\TestRepos\Todo-TestProject\src\todo\serviceLayer\Abstractions\obj\Debug\netstandard2.0\Todo.ServiceLayer.Abstractions.pdb
