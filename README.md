@@ -1,5 +1,6 @@
 # Test Project
 
+A test project for myself to learn react/docker and anything else.
 
 ## Docker 
 
@@ -21,7 +22,7 @@ For my purposes I used docker swarm for the next step but if you wish to use kub
 
 make sure you have docker swarm up and running before carrying on.
 
-firstly change the todo-stack.yaml
+firstly change the todo-stack.yaml changing {YOUR_REG_NAME} *(leave the ${APPDATA} bit)*
 
 ```yaml
 version: '3.7'    
