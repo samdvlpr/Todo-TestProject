@@ -4,7 +4,7 @@ A test project for myself to learn react/docker and anything else.
 
 ## Docker 
 
-** NOTE: ** Building on dev env you should use User Secrets in the API 
+**NOTE:** Building on dev env you should use User Secrets in the API 
 
 To containerize the API.
 
