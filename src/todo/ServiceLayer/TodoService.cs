@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using AutoMapper.Extensions.ExpressionMapping;
 using Todo.Abstractions;
 using Todo.DataLayer.Abstractions;
 using Todo.ServiceLayer.Abstractions;
@@ -36,14 +35,14 @@ namespace Todo.ServiceLayer
         {
             var todo = await _todoRepository.GetAsync(id);
             todo.IsComplete = false;
-            _todoRepository.UpdateAsync(todo);
+            await _todoRepository.UpdateAsync(todo);
         }
 
         public async Task MarkTodoCompleteAsync(Guid id)
         {
             var todo = await _todoRepository.GetAsync(id);
             todo.IsComplete = true;
-            _todoRepository.UpdateAsync(todo);
+            await _todoRepository.UpdateAsync(todo);
         }
 
         public async Task AddTodoAsync(ITodoItem Item)

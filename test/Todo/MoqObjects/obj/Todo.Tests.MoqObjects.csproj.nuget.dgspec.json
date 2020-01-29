@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {}
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
+        "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
         "projectName": "Todo.DataLayer.Abstractions",
-        "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
+        "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\obj\\",
+        "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj",
+        "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj",
         "projectName": "Todo.RepositoryLayer.Abstractions",
-        "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj",
+        "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\obj\\",
+        "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -92,8 +92,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
-                "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj"
+              "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
+                "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
+        "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
         "projectName": "Todo.Tests.MoqObjects",
-        "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
+        "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\obj\\",
+        "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -160,8 +160,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
-                "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
+              "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
+                "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
               }
             }
           }

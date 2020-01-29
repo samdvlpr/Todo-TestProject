@@ -1,0 +1,13 @@
+services:
+  todoapi:
+    build:
+      context: C:\Users\sam\source\TestRepos\Todo-TestProject
+      dockerfile: src/todo/API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: todoapi
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\sam\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

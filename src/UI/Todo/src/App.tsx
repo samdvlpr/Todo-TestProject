@@ -61,7 +61,7 @@ class App extends Component<IProps, State> {
 
     return (
       <div className="App">
-        <AddTodoComponant  ref={ATDC => { this.ATDCRef = ATDC; }}  OnAdd={ this.OnAdd }  />
+        <AddTodoComponant  ref={ATDC => { this.ATDCRef = ATDC; }}  OnAdd={ this.OnAdd } test={true} />
         <Navbar/>
         <div className="d-flex justify-content-center p-3 bg-dark sticky-top">
             {button}

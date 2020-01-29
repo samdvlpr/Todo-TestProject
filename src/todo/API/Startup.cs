@@ -1,4 +1,5 @@
 using System.Reflection;
+using Endpoints.Todo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -49,6 +50,9 @@ namespace TodoAPI
              Using my XServiceBuilder I add a service builder which allows me to dependency inject services that
              inherit from the IXService.
              */
+
+            services.Configure<ConnectionStringsOption>(options => Configuration.GetSection("ConnectionStrings").Bind(options));
+
             services.AddXServices(Configuration).AddTodoServiceCollection().AddTodoRepositoryServiceCollection();
 
             services.AddControllers();

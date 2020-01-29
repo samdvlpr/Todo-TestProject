@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dataLayer\Todo.DataLayer.csproj" />
-    <ProjectReference Include="Abstractions\Todo.RepositoryLayer.Abstractions.csproj" />
+    <ProjectReference Include="abstractions\Todo.RepositoryLayer.Abstractions.csproj" />
     <ProjectReference Include="..\Todo.csproj" />
   </ItemGroup>
 

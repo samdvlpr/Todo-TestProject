@@ -6965,11 +6965,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
+      "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
       "projectName": "Todo.Tests.MoqObjects",
-      "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
+      "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\obj\\",
+      "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -6990,8 +6990,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
             }
           }
         }

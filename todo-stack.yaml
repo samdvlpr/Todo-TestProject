@@ -1,0 +1,11 @@
+version: '3.7'    
+
+services:
+  todo-app:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    image: samb1990/todo-api:latest
+    ports:
+      - "8000:80"  
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro

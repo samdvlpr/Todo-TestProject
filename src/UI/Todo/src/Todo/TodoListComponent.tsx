@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import TodoItemComponent from './TodoItemComponent'
 import ITodoList from './Objects/Abstractions/ITodoList';
-import TodoList from './Objects/TodoList';
-import { observable, computed } from 'mobx';
 import ITodoItem from './Objects/Abstractions/ITodoItem';
 import { observer } from 'mobx-react';
 
@@ -14,8 +12,7 @@ interface IProps{
 
 
 @observer
-export default class TodoListComponent extends Component<IProps> {
-    
+export default class TodoListComponent extends Component<IProps> {    
 
     constructor(props)
     {

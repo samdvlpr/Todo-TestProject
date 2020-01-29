@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {}
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
+        "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
         "projectName": "Todo.DataLayer.Abstractions",
-        "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
+        "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\Todo.DataLayer.Abstractions.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\obj\\",
+        "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\DataLayer\\Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

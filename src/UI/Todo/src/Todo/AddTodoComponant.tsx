@@ -7,6 +7,7 @@ import TodoService from './Services/TodoService';
 interface IProps
 {
     OnAdd(todoItem:ITodoItem);
+    test : boolean;
 }
 
 interface IState{
@@ -28,6 +29,7 @@ export default class AddTodoComponant extends Component<IProps, IState>
 
     openModal()
     {
+        alert(this.props.test)
         $('#AddTodoModel').modal('show');
         $(this.refs.InputTitle).val();
         $(this.refs.InputDescription).val("");

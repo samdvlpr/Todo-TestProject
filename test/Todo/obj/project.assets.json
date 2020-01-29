@@ -10256,11 +10256,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\Todo.Tests.csproj",
+      "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\Todo.Tests.csproj",
       "projectName": "Todo.Tests",
-      "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\Todo.Tests.csproj",
+      "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\Todo.Tests.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\obj\\",
+      "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -10281,23 +10281,23 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\dataLayer\\Todo.DataLayer.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\dataLayer\\Todo.DataLayer.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\dataLayer\\Todo.DataLayer.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\dataLayer\\Todo.DataLayer.csproj"
             },
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
             },
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj"
             },
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj"
             },
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj"
             },
-            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {
-              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj"
+            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj": {
+              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\test\\Todo\\MoqObjects\\Todo.Tests.MoqObjects.csproj"
             }
           }
         }

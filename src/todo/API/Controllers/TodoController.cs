@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Todo;
 using Todo.Abstractions;
 using Todo.ServiceLayer.Abstractions;
+using TodoAPI;
 
 namespace Endpoints.Todo.Controllers
 {
@@ -17,11 +19,21 @@ namespace Endpoints.Todo.Controllers
 
         private readonly ILogger<TodoController> _logger;
         private readonly ITodoService _todoService;
+        private readonly IOptions<ConnectionStringsOption> _constring;
 
-        public TodoController(ILogger<TodoController> logger, ITodoService todoService)
+        public TodoController(ILogger<TodoController> logger, ITodoService todoService , IOptions<ConnectionStringsOption> constring)
         {
             _logger = logger;
             _todoService = todoService;
+            _constring = constring;
+        }
+
+        [HttpGet]
+        [Route("conString")]
+        public async Task<string> GetAsync()
+        {
+        //    return "hello world";
+            return _constring.Value.TodoDatabase;
         }
 
         [HttpGet]

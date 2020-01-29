@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="Abstractions\Todo.Abstractions.csproj" />
+    <ProjectReference Include="abstractions\Todo.Abstractions.csproj" />
     <ProjectReference Include="serviceLayer\Todo.ServiceLayer.csproj" />
   </ItemGroup>
 

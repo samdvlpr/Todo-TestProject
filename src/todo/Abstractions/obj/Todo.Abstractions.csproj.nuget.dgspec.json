@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj": {}
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj": {
+    "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj",
+        "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj",
         "projectName": "Todo.Abstractions",
-        "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj",
+        "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj",
         "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\obj\\",
+        "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
