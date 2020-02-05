@@ -9,7 +9,7 @@ WORKDIR /app
 COPY . .
 WORKDIR /app/api
 
-RUN dotnet restore
+RUN dotnet restore TodoAPI.csproj
 # Copy everything else and build
 RUN dotnet publish -c Release -o out
 
