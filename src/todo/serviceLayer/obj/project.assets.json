@@ -7065,11 +7065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj",
+      "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj",
       "projectName": "Todo.ServiceLayer",
-      "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj",
+      "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\obj\\",
+      "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -7090,11 +7090,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\repositoryLayer\\abstractions\\Todo.RepositoryLayer.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\repositoryLayer\\abstractions\\Todo.RepositoryLayer.Abstractions.csproj"
             },
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Abstractions\\Todo.ServiceLayer.Abstractions.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\abstractions\\Todo.ServiceLayer.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\abstractions\\Todo.ServiceLayer.Abstractions.csproj"
             }
           }
         }

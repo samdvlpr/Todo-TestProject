@@ -12,6 +12,10 @@ export default class TodoList implements ITodoList
         this.Items.push(...todoItems)
     }
 
+    Add(todoItem : ITodoItem):void
+    {
+        this.Items.push(todoItem);
+    }
 
     @computed get GetItems():ITodoItem[]
     {

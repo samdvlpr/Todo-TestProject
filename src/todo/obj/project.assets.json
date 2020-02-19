@@ -8844,11 +8844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj",
+      "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj",
       "projectName": "Todo",
-      "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj",
+      "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\obj\\",
+      "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -8869,11 +8869,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Abstractions\\Todo.Abstractions.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\abstractions\\Todo.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\abstractions\\Todo.Abstractions.csproj"
             },
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\serviceLayer\\Todo.ServiceLayer.csproj"
             }
           }
         }

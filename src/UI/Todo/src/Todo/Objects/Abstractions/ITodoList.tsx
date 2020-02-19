@@ -5,4 +5,5 @@ export default interface ITodoList {
     Count : number;
     IsEmpty : boolean;   
     GetItems : ITodoItem[];
+    Add : (todoItem : ITodoItem) => void;
 }

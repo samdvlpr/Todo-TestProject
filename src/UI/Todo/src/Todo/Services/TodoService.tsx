@@ -36,11 +36,9 @@ export default class TodoService {
             return items;
     }
 
-    static async Add(todoItem : ITodoItem)
+    static async Add(todoItem : ITodoItem): Promise<string>
     {      
         let body = JSON.stringify(todoItem);
-
-        console.log(body);
 
         const myRequest = new Request(this.endpoint, {
           method: 'Post',
@@ -50,7 +48,39 @@ export default class TodoService {
         });
                   
 
-        await fetch(myRequest);  
+        var val = await fetch(myRequest).then((response) => { 
+          return response.text()
+        }).catch(() => { return "" });  
+
+        return val;
+    }
+
+    
+    static async Delete(id: string) : Promise<boolean>
+    {      
+        const myRequest = new Request(`${this.endpoint}/delete?id=${id}`, {
+          method: 'Post',
+          mode: 'cors',
+          headers: this.headers
+        });
+                  
+
+        return await fetch(myRequest).then(() => { return true }).catch(() => { return false });  
+    }
+    
+    static async Edit(todoItem : ITodoItem) : Promise<boolean>
+    {      
+        let body = JSON.stringify(todoItem);
+
+        const myRequest = new Request(`${this.endpoint}/edit`, {
+          method: 'Post',
+          mode: 'cors',
+          headers: this.headers,
+          body: body
+        });
+                  
+
+        return await fetch(myRequest).then(() => { return true }).catch(() => { return false });  
     }
 
     static async MarkComplete(id: string)

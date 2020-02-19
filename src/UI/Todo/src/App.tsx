@@ -3,24 +3,27 @@ import  TodoListComponent  from "./Todo/TodoListComponent";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from './Navbar'
-import AddTodoComponant from './Todo/AddTodoComponant'
+import ModTodoComponant from './Todo/ModTodoComponant'
 import TodoService from './Todo/Services/TodoService';
-import TodoItem from './Todo/Objects/TodoItem';
 import TodoList from './Todo/Objects/TodoList';
 import { observable } from 'mobx';
 import './App.scss'
 import { observer } from 'mobx-react';
+import ITodoList from './Todo/Objects/Abstractions/ITodoList';
+import ITodoItem from './Todo/Objects/Abstractions/ITodoItem';
+import TodoItem from './Todo/Objects/TodoItem';
 
 interface IProps {
-
 }
 
 class State
 {
   @observable
-  list: TodoList = new TodoList([]);
+  list: ITodoList = new TodoList([]);
   @observable
   includeComplete : boolean = false;
+  showAddModal : boolean = false;
+  editItem : ITodoItem | null = null
 }
 
 @observer
@@ -31,7 +34,9 @@ class App extends Component<IProps, State> {
     super(props);
     this.state = {
       list : new TodoList([]),
-      includeComplete : false
+      includeComplete : false,
+      showAddModal : false,
+      editItem : null
     };
   }
   
@@ -44,46 +49,37 @@ class App extends Component<IProps, State> {
     var loadedlist = await TodoService.Get(includeCompleted);
     this.setState({list : loadedlist});
   }
-
-  ATDCRef!: AddTodoComponant | null;
   
   render()
-  {
-      const state = this.state;
-      let button;
-      if(this.state.includeComplete)
-      {
-        button =  <button onClick={this.ToggleIncludeComplete} className="btn btn-primary mr-1" >Hide Completed</button>;
-      }
-      else{
-        button =  <button onClick={this.ToggleIncludeComplete} className="btn btn-primary mr-1">Show Completed</button>;
-      }
-
+  {    
+    let button =  <button onClick={this.ToggleIncludeComplete} className="btn btn-primary mr-1" >{(this.state.includeComplete ? "Hide Completed" : "Show Completed")}</button>;
+      
     return (
       <div className="App">
-        <AddTodoComponant  ref={ATDC => { this.ATDCRef = ATDC; }}  OnAdd={ this.OnAdd } test={true} />
+        <ModTodoComponant show={this.state.showAddModal} 
+          onHide={ this.OnHide }
+          list={ this.state.list } item={ this.state.editItem ?? new TodoItem }  />
         <Navbar/>
         <div className="d-flex justify-content-center p-3 bg-dark sticky-top">
             {button}
-            <button className="btn btn-success ml-1" onClick={ this.AddTodoClick }>Add New To-do</button>            
+            <button className="btn btn-success ml-1" onClick={ this.OnAddClick }>Add New To-do</button>            
         </div>
-        <TodoListComponent list={this.state.list}  ShowCompleted={this.state.includeComplete}/>
+        <div className="list-container">
+          <TodoListComponent list={ this.state.list }  showCompleted={this.state.includeComplete} 
+            onEditClick={ this.OnEditClick }/>
+        </div>
         <div className="d-flex justify-content-center p-3 bg-dark fixed-bottom">
 
         </div>
       </div>
     );
   }
-  
-  OnAdd = (todoItem: TodoItem) =>
-  {
-    this.state.list.Items.push(todoItem);
-  }
 
-  AddTodoClick = () => 
-  {
-    this.ATDCRef?.openModal();
-  }
+  OnHide = () => { this.setState({showAddModal: false}) }
+  
+  OnEditClick = (item:ITodoItem) => { this.setState({ editItem : item, showAddModal: true }) }
+
+  OnAddClick = () => { this.setState({showAddModal: true, editItem : new TodoItem }) } 
 
   ToggleIncludeComplete = () =>
   {

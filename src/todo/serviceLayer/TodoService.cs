@@ -22,9 +22,9 @@ namespace Todo.ServiceLayer
             _mapper = mapper;
         }
 
-        public  async Task<IEnumerable<ITodoItem>> GetTodosAsync(bool IncludeCompleted)
+        public  async Task<IEnumerable<ITodoItem>> GetTodosAsync(bool includeCompleted)
         {
-            var data = await _todoRepository.GetAllAsync(IncludeCompleted);
+            var data = await _todoRepository.GetAllAsync(includeCompleted);
 
             var result = data.Select(d => _mapper.Map<ITodoItem>(d));
 
@@ -38,6 +38,24 @@ namespace Todo.ServiceLayer
             await _todoRepository.UpdateAsync(todo);
         }
 
+        public async Task EditTodoAsync(ITodoEditItem item)
+        {
+            //var data = _mapper.Map<ITodoDataItem>(item);
+
+            var todo = await _todoRepository.GetAsync(item.Id);
+
+            todo.Title = item.Title;
+            todo.Description = item.Description;
+            todo.CompleteBy = item.CompleteBy;
+
+            await _todoRepository.UpdateAsync(todo);
+        }
+
+        public async Task DeleteTodoAsync(Guid id)
+        {
+            await _todoRepository.DeleteAsync(id);
+        }
+
         public async Task MarkTodoCompleteAsync(Guid id)
         {
             var todo = await _todoRepository.GetAsync(id);
@@ -45,14 +63,14 @@ namespace Todo.ServiceLayer
             await _todoRepository.UpdateAsync(todo);
         }
 
-        public async Task AddTodoAsync(ITodoItem Item)
+        public async Task<Guid> AddTodoAsync(ITodoItem item)
         {
-            var data = _mapper.Map<ITodoDataItem>(Item);
+            var data = _mapper.Map<ITodoDataItem>(item);
 
             if(string.IsNullOrWhiteSpace(data.Title))
                 throw new InvalidDataException("Cannot add a empty title todo item");
 
-            await _todoRepository.AddAsync(data);
+            return await _todoRepository.AddAsync(data);
         }
     }
 }

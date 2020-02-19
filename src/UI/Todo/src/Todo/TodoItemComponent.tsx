@@ -4,11 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
 import TodoService from "./Services/TodoService";
 import { observer } from "mobx-react";
+import ITodoItem from "./Objects/Abstractions/ITodoItem";
+import Moment from 'react-moment';
+import MomentUtils from "@date-io/moment";
 
 interface IProp{
-    item : TodoItem
-    OnCompleted(item:TodoItem)
-    OnReOpen(item:TodoItem)
+    item : ITodoItem
+    OnCompleted(item:ITodoItem)
+    OnReOpen(item:ITodoItem)
+    OnEditClick(item:ITodoItem)
+    OnDeleteClick(id:ITodoItem)
 }
 
 @observer
@@ -30,20 +35,32 @@ export default class TodoItemComponent extends Component<IProp> {
             button = <button type="button" className="btn btn-primary"
             onClick={this.ReOpen}>Reopen</button>
         }
+        var moment= new MomentUtils()
 
+        const today = moment.parse(new Date().toString(), "");
+        const completeBy = moment.parse(Item.completeBy?? "", "");
+
+        const isBefore = moment.isBefore(today, completeBy);
+        const isSoon = moment.isAfter(today.add(24, 'h'), completeBy)
+        
+        const date = Item.completeBy == null ? <span className="no-date" >Uknown Date</span> : 
+        <Moment element="span" className={isBefore ? (isSoon ? "soon-date" : "future-date") :  "past-date"} fromNow>{Item.completeBy}</Moment>;
+        
         return (
-            <div className="list-group-item">                
+            <div className={ `list-group-item ${ Item.isComplete ? "complete-item" : "" }`}>                
                 <div className="d-flex w-100 justify-content-between">
                     <div className="col-sm-2 d-flex align-items-center justify-content-center">
                         {button}
                     </div>
                     <div className="col-sm-8">
                         <h5 className="mb-1">{ Item.title }</h5>
-                        <small><strong>complete by: </strong>unknown date</small>
+                        { !Item.isComplete ?  <span><strong>Due: </strong>{ date }</span>                                                                                   
+                         : 
+                         <span><strong className="complete-date">Complete</strong></span>  }
                         <p className="mb-1">{ Item.description }</p>    
                     </div>
                     <div className="col-sm-2 d-flex align-items-center justify-content-center">
-                        <FontAwesomeIcon className="m-1 pointer" icon={faEdit} onClick={this.onEditClick}/>    
+                        { !Item.isComplete ? <FontAwesomeIcon className="m-1 pointer" icon={faEdit} onClick={this.OnEditClick}/>  : "" }  
                         <FontAwesomeIcon className="m-1 pointer" icon={faTrash} onClick={this.onDeleteClick}/>                    
                     </div>
                 </div>
@@ -69,17 +86,24 @@ export default class TodoItemComponent extends Component<IProp> {
         }
     }
 
+    OnEditClick = () =>
+    {
+        this.props.OnEditClick(this.props.item)
+    }
+
     onDeleteClick  = () =>
     {
         window.confirm("Are you sure you wish to delete this todo?")
         {
-            alert(`Delete id:${this.props.item.id}`);
+            TodoService.Delete(this.props.item.id).then((response) => {
+                if(!response)
+                {
+                    alert("Delete Failed");
+                    return;
+                }
+                this.props.OnDeleteClick(this.props.item);
+            })
         }
-    }
-
-    onEditClick = () =>
-    {
-        alert(`Send item with id:${this.props.item.id} for delete`);
     }
 
     onToggleCompleted = () => { 

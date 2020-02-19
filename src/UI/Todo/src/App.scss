@@ -2,3 +2,33 @@
 {
     cursor: pointer;
 }
+
+.list-container
+{
+    padding-bottom:32px
+}
+
+.list-group-item
+{
+    .no-date
+    {
+        font-style: italic;
+        color: slategrey;
+    }
+    .past-date
+    {
+        color: red;
+    }
+    .soon-date
+    {
+        color: sandybrown;
+    }
+    .future-date
+    {
+        color: teal;
+    }
+    .complete-date
+    {
+        color: green;
+    }
+}

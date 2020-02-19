@@ -9678,11 +9678,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\TodoAPI.csproj",
+      "projectUniqueName": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\TodoAPI.csproj",
       "projectName": "TodoAPI",
-      "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\TodoAPI.csproj",
+      "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\TodoAPI.csproj",
       "packagesPath": "C:\\Users\\sam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\obj\\",
+      "outputPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -9703,11 +9703,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Todo.RepositoryLayer.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\RepositoryLayer\\Todo.RepositoryLayer.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\repositoryLayer\\Todo.RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\repositoryLayer\\Todo.RepositoryLayer.csproj"
             },
-            "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj": {
-              "projectPath": "c:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj"
+            "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj": {
+              "projectPath": "C:\\Users\\sam\\source\\TestRepos\\Todo-TestProject\\src\\todo\\Todo.csproj"
             }
           }
         }

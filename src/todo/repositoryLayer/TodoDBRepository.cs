@@ -20,29 +20,49 @@ namespace Todo.RepositoryLayer
             _mapper = mapper;
         }
 
-        public async Task AddAsync(ITodoDataItem todoDataItem)
+        public async Task<Guid> AddAsync(ITodoDataItem todoDataItem)
         {
             todoDataItem.Created = DateTime.Now;
-            await _context.Todo.AddAsync(_mapper.Map<TodoDataItem>(todoDataItem));
-            _context.SaveChanges();
+
+            var item = await _context.Todo.AddAsync(_mapper.Map<TodoDataItem>(todoDataItem));
+
+            await _context.SaveChangesAsync();
+
+            return item.Entity.Id;
         }
 
         public async Task UpdateAsync(ITodoDataItem todoDataItem)
         {
-            var todo = _context.Todo.FirstOrDefault(t => t.Id == todoDataItem.Id); ;
+            var todo = _context.Todo.FirstOrDefault(t => t.Id == todoDataItem.Id);
+
+            if (todo == null) throw new KeyNotFoundException();
+
             _mapper.Map(todoDataItem, todo);
+
             _context.Todo.Update(todo);
-            _context.SaveChanges();
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            var todo = _context.Todo.FirstOrDefault(t => t.Id == id);
+
+            if(todo == null) throw new KeyNotFoundException();
+
+            _context.Todo.Remove(todo);
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<ITodoDataItem>> GetAllAsync(bool IncludeCompleted)
         {
-           return _context.Todo.Where(t => IncludeCompleted || !t.IsComplete).AsEnumerable();
+           return await Task.Run(() => _context.Todo.Where(t => IncludeCompleted || !t.IsComplete).AsEnumerable());
         }
         
         public async Task<ITodoDataItem> GetAsync(Guid id)
         {
-            return _context.Todo.FirstOrDefault(t => t.Id == id);
+            return await Task.Run(() => _context.Todo.FirstOrDefault(t => t.Id == id));
         }
     }
 }

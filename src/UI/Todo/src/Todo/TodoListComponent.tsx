@@ -7,7 +7,8 @@ import { observer } from 'mobx-react';
 
 interface IProps{  
     list : ITodoList 
-    ShowCompleted:boolean
+    showCompleted:boolean
+    onEditClick(item:ITodoItem)
 }
 
 
@@ -21,7 +22,7 @@ export default class TodoListComponent extends Component<IProps> {
 
     OnCompleted = (item:ITodoItem) =>
     {
-        if(!this.props.ShowCompleted)
+        if(!this.props.showCompleted)
         {
             const index: number = this.props.list.Items.indexOf(item);
             if (index !== -1) {
@@ -32,13 +33,24 @@ export default class TodoListComponent extends Component<IProps> {
         {
             item.isComplete = true
         }
-        /*TODO: update list if not showing completed*/
     }
 
     OnReOpen = (item:ITodoItem) =>
     {
         item.isComplete = false
     }
+
+    OnDeleteClick = (item:ITodoItem) =>
+    {
+        const index: number = this.props.list.Items.indexOf(item);
+        this.props.list.Items.splice(index, 1)
+    }
+
+    OnEditClick = (item:ITodoItem) =>
+    {
+        this.props.onEditClick(item)
+    }
+
 
     public render()
     {
@@ -48,7 +60,8 @@ export default class TodoListComponent extends Component<IProps> {
         }
         return (this.props.list.GetItems.map(listitem => {
             return (<div className="list-group" key={ listitem.id } >
-                <TodoItemComponent key={ listitem.id } item={ listitem } OnCompleted={this.OnCompleted} OnReOpen={this.OnReOpen} />
+                <TodoItemComponent key={ listitem.id } item={ listitem } OnDeleteClick={this.OnDeleteClick}
+                OnCompleted={this.OnCompleted} OnReOpen={this.OnReOpen} OnEditClick={ this.OnEditClick } />
             </div>)
             }));
     }

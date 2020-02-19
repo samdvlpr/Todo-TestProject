@@ -15,9 +15,10 @@ namespace Todo.Tests.MoqObjects
             Items = new List<ITodoDataItem>();
         }
         
-        public async Task AddAsync(ITodoDataItem todoDataItem)
+        public async Task<Guid> AddAsync(ITodoDataItem todoDataItem)
         {
             ((List<ITodoDataItem>)Items).Add(todoDataItem);
+            return await Task.FromResult(Guid.Empty);
         }
 
         public Task<IEnumerable<ITodoDataItem>> GetAllAsync(bool IncludeCompleted)
@@ -26,6 +27,11 @@ namespace Todo.Tests.MoqObjects
         }
 
         public Task UpdateAsync(ITodoDataItem todoDataItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Guid id)
         {
             throw new NotImplementedException();
         }

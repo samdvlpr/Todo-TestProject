@@ -28,18 +28,36 @@ namespace Endpoints.Todo.Controllers
             _constring = constring;
         }
 
-        [HttpGet]
-        [Route("conString")]
-        public async Task<string> GetAsync()
-        {
-        //    return "hello world";
-            return _constring.Value.TodoDatabase;
-        }
+        //[HttpGet]
+        //[Route("conString")]
+        //public async Task<string> GetAsync()
+        //{
+        ////    return "hello world";
+        //    return _constring.Value.TodoDatabase;
+        //}
 
         [HttpGet]
         public async Task<IEnumerable<ITodoItem>> GetAsync(bool IncludeCompleted)
         {
             return await _todoService.GetTodosAsync(IncludeCompleted);
+        }
+        
+        [HttpPost]
+        [Route("Edit")]
+        public async Task Edit([FromBody]TodoEditItem item)
+        {
+            _logger.Log(LogLevel.Trace, $"Todo Controller called edit with data { JsonConvert.SerializeObject(item) }.");
+
+            await _todoService.EditTodoAsync(item);
+        }
+
+        [HttpPost]
+        [Route("Delete")]
+        public async Task Delete(string id)
+        {
+            _logger.Log(LogLevel.Trace, $"Todo Controller called delete with id { id }.");
+
+            await _todoService.DeleteTodoAsync(Guid.Parse(id));
         }
 
         [HttpPost]
@@ -58,11 +76,11 @@ namespace Endpoints.Todo.Controllers
 
         /* Send a populated TodoItem into this API controller method to pass onto the Todoservice to handle the add. */
         [HttpPost]
-        public void AddAsync([FromBody]TodoItem item)
+        public async Task<Guid> AddAsync([FromBody]TodoItem item)
         {
-            _logger.Log(LogLevel.Trace, $"Todo Controller called with data { JsonConvert.SerializeObject(item) }.");
+            _logger.Log(LogLevel.Trace, $"Todo Controller called add with data { JsonConvert.SerializeObject(item) }.");
             
-            _todoService.AddTodoAsync(item);
+            return await _todoService.AddTodoAsync(item);
         }
     }
 }
